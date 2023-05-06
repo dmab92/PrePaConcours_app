@@ -1,0 +1,125 @@
+<odoo>
+    <data>
+
+
+         <!-- Top menu item -->
+
+    <menuitem name="LEADERS ERP"
+              id="leaders_app.menu_root"
+    web_icon="hr,static/description/icon.svg"/>
+
+    <!-- menu categories -->
+
+
+
+    <!-- actions -->
+
+<!--    <menuitem name="Apprenants1"-->
+<!--              id="leaders_app.apprenant"-->
+<!--              parent="leaders_app.menu_root"-->
+<!--              />-->
+
+        <menuitem name="Les Apprenants"
+                  id="leaders_app.apprenants"
+                  parent="leaders_app.menu_root"
+                  sequence="1"
+              />
+
+        <menuitem name="Enregister un Apprenant"
+                  id="leaders_app.save_apprenants"
+                  parent="leaders_app.apprenants"
+                  action="leaders_app.view_leaders_apprenant_save_action"
+              />
+        <menuitem name="Les Apprenants de mon centre"
+                  id="leaders_app.my_apprenants"
+                  parent="leaders_app.apprenants"
+                  action="leaders_app.view_leaders_apprenant_my_center_action"
+              />
+
+        <menuitem name="Tous les Apprenants"
+                  id="leaders_app.all_apprenants"
+                  parent="leaders_app.apprenants"
+                  action="leaders_app.view_leaders_apprenant_action"
+              />
+
+          <menuitem name="Concours Blancs"
+                  id="leaders_app.concours_blancs"
+                  parent="leaders_app.menu_root"
+                  sequence="2"
+              />
+
+        <menuitem name="Enregistrer les notes d'un concours blanc"
+                  id="leaders_app.concours_blancs_save_note"
+                  parent="leaders_app.concours_blancs"
+                  action="leaders_app.view_leaders_concour_blanc_action"
+              />
+
+<!--        <menuitem name="Résultats Nationaux"-->
+<!--                  id="leaders_app.concours_blanc_results"-->
+<!--                  parent="leaders_app.concours_blancs"-->
+<!--                  action="leaders_app.test_model_wizard_action"-->
+<!--              />-->
+
+
+
+        <menuitem name="Gestion du personnel"
+                  id="leaders_app.personnel"
+                  parent="leaders_app.menu_root"
+                  sequence="3"
+              />
+
+        <menuitem name="Enregistrer un personnel"
+              id="leaders_app.save_personnel"
+              parent="leaders_app.personnel"
+              action="leaders_app.view_leaders_personnel_action"/>
+
+        <menuitem name="Enseigants"
+              id="leaders_app.employe_ensei"
+              parent="leaders_app.personnel"
+              action="leaders_app.view_leaders_teacher_action"/>
+
+        <menuitem name="Employés Permanants"
+              id="leaders_app.employee_perma"
+              parent="leaders_app.personnel"
+              action="leaders_app.view_leaders_employee_perma_action"/>
+
+          <menuitem name="Employés Temporaires"
+              id="leaders_app.employee_tempo"
+              parent="leaders_app.personnel"
+              action="leaders_app.view_leaders_employee_temp_action"/>
+
+
+
+
+
+   <!-- CONFIGURATIONS -->
+         <menuitem name="Configurations"
+              id="leaders_app.config"
+                   sequence="4"
+              parent="leaders_app.menu_root" />
+
+        <menuitem name="Centres de Prépas"
+              id="leaders_app.center"
+              parent="leaders_app.config"
+              action="leaders_app.view_leaders_center_action"/>
+
+
+
+        <menuitem name="Concours"
+              id="leaders_app.concours"
+              parent="leaders_app.config"
+              action="leaders_app.view_leaders_concour_config_action"/>
+
+        <menuitem name="Anneés Académiques"
+              id="leaders_app.year"
+              parent="leaders_app.config"
+              action="leaders_app.view_leaders_year_action"/>
+
+
+
+
+
+
+
+    </data>
+</odoo>
